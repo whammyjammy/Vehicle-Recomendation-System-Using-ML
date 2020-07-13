@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Your Ideal car:</h3>
+<br></br>
+<div class="col-md-4">
+    <div class="content-section">
+      <h3>Car.jpeg</h3>
+      <p class='text-muted'>IMAGE OF CAR FROM DDB
+      </p>
+    </div>
+  </div>
+
+<div class="col-md-4">
+  <div class="content-section">
+    <fieldset class="form-group">
+    {% for post in posts %}
+<h1>{{ post.title }}</h1>
+<p>Horsepower:  {{post.horsepower}}</p>
+<p>Cylinders:  {{post.cylinders}}</p>
+<p>Mileage:  {{post.mileage}}</p>
+<p>Transmission:  {{post.manual}}</p>
+<p>Gears:  {{post.gears}}</p>
+<p>Curb Weight:  {{post.seats}}</p>
+{% endfor %}
+</fieldset>
+  </div>
+</div>
+
+{% endblock content %}

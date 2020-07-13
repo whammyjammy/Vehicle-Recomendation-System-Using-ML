@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Fill out the details below:</legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+                    {{ form.username(class="form-control form-control-lg") }}
+                    
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {{ form.email(class="form-control form-control-lg") }}
+        
+                </div>
+
+                <div class="form-group">
+                    {{ form.horsepower.label(class="form-control-label") }}
+                    {{ form.horsepower(class="form-control form-control-lg") }}
+                    
+                </div>
+                
+                <div class="form-group">
+                    {{ form.cylinders.label(class="form-control-label") }}
+                    {{ form.cylinders(class="form-control form-control-lg") }}
+                    
+                </div> 
+
+                <div class="form-group">
+                    {{ form.mileage.label(class="form-control-label") }}
+                    {{ form.mileage(class="form-control form-control-lg") }}
+                    
+                </div>
+                
+
+                <div class="form-group">
+                    {{ form.gears.label(class="form-control-label") }}
+                    {{ form.gears(class="form-control form-control-lg") }}
+                    
+                </div>
+                <div class="form-group">
+                    {{ form.seats.label(class="form-control-label") }}
+                    {{ form.seats(class="form-control form-control-lg") }}
+                    
+                </div>
+                
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
